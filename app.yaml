@@ -1,0 +1,36 @@
+runtime: php
+env: flex
+
+runtime_config: 
+  document_root: public_html
+
+# Ensure we skip ".env", which is only for local development
+skip_files: 
+    - .env
+
+automatic_scaling:
+    min_num_instances: 1
+    max_num_instances: 1
+
+resources:
+    cpu: 2
+    memory_gb: 4
+    disk_size_gb: 10
+
+env_variables:
+    # Put production environment variables here.
+    APP_DEBUG: true
+    APP_ENV: production
+    APP_KEY: base64:WGVNB8gFnwTcnLBDYjZW8v7rE8Nx7wmoQtJ89UgUphQ=
+    APP_NAME: "Caleg"
+
+    LOG_LEVEL: debug
+
+    DB_CONNECTION: mysql
+    DB_HOST: 34.101.217.171
+    DB_PORT: 3306
+    DB_DATABASE: caleg
+    DB_USERNAME: root
+    DB_PASSWORD: BlG70UsL>S8SH7On
+
+    API_KEY: "A4TwnRH9AKdDGaC9pObFxZ0tv1jxu5isL0nqfElkkEM6C3xx85lkIU9WkzoqxGoA96JoBoAQGrU8GErnd2U1QDgf14r5WGAvd8pjfwjc14NPeUarS4Y2ZhNw6uJ30yKptYKdbL8eVVlqzoiD8lCASrioJPLtVF11TequCyFYfsEqUrLhkXdJK3TjDc48Cs0eQ2u8UUrR12Mk6fdmlQRFWo82fo1n9pbmMJYNOyqfUeqA0QVS6Mx5JoDLI5GTUjlg"
